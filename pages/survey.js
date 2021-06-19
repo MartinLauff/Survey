@@ -148,15 +148,18 @@ const survey = () => {
       return setActive(true);
     }
 
-    await surveyData.post(
-      '/survey',
-      { ...state },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    ///////////////////////
+    // Code below is for production
+
+    // await surveyData.post(
+    //   '/survey',
+    //   { ...state },
+    //   {
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //   }
+    // );
     router.push('/completion');
   };
 
