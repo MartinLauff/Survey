@@ -1,0 +1,281 @@
+.container {
+  max-width: 120rem;
+  background-color: #333;
+  -webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 50rem;
+  overflow: auto;
+}
+.container h1 {
+  margin: 2rem 2rem 0;
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(3em, 5vw, 5em);
+}
+.container button {
+  width: 7.8em;
+  height: 3em;
+  margin: 5rem auto 3rem;
+  cursor: pointer;
+  display: block;
+  border-radius: 0.4rem;
+  border: none;
+  background: #5b3df7;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.container button:hover {
+  background: #403df7;
+}
+.question legend {
+  font-size: clamp(2rem, 2.5vw, 2.3rem);
+}
+.question label,
+.question span,
+.container button {
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
+}
+.question {
+  color: #fff;
+  max-width: 75%;
+  margin: 3rem auto 0;
+}
+.question div {
+  margin: 0.5rem 0;
+}
+
+.formRadioInput {
+  display: none;
+}
+.formRadioLabel {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.formRadioLabel #text {
+  text-align: center;
+}
+.formRadioButton,
+.specialBtns {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  border-radius: 0.1rem;
+  border: 2px solid #fff;
+  display: inline-block;
+}
+.formRadioButton::after {
+  content: '';
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.1rem;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  background-image: url(/check.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.formRadioInput:checked ~ .formRadioLabel .formRadioButton::after,
+.formRadioInput:checked ~ .formRadioLabel .formRadioButtonv2::after {
+  opacity: 1;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.answers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 20%);
+  margin-left: 6rem;
+}
+
+.answers p {
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+}
+.answers div {
+  text-align: center;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: left;
+}
+.checks {
+  background-color: #20beb7;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 4rem;
+  width: 29rem;
+
+  position: absolute;
+  left: -51%;
+  top: 47%;
+  transform: rotate(90deg);
+}
+.checks div {
+  display: flex;
+  align-items: center;
+}
+.questionContainer {
+  margin-top: 1.5rem;
+}
+.question5 {
+  margin-top: 5rem;
+}
+.question5 input {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+.question5 input:focus {
+  box-shadow: 0 0 3pt 2pt #ff3366;
+  outline: none;
+}
+.brs,
+.brs2 {
+  display: initial;
+}
+.question4 .questionContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  min-height: 29rem;
+}
+.question4 .formRadioButton {
+  transform: rotate(270deg);
+}
+.question4 .formRadioButton::after {
+  top: -15%;
+  left: -15%;
+}
+.specialBtns::after {
+  content: '';
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.1rem;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  background-image: url(/check.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.formRadioInput:checked ~ .formRadioLabel .specialBtns::after {
+  opacity: 1;
+}
+.error {
+  background-color: #111;
+  border: 0.3rem solid #ff3366;
+  color: #fff;
+  text-align: center;
+  width: 15em;
+  height: 3em;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto 0;
+  border-radius: 0.2rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.7rem);
+}
+.flex {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 22rem) {
+  .checks {
+    left: -41%;
+  }
+}
+@media only screen and (min-width: 23rem) {
+  .checks {
+    left: -38%;
+  }
+}
+@media only screen and (min-width: 25rem) {
+  .checks {
+    left: -28%;
+  }
+}
+@media only screen and (min-width: 26rem) {
+  .brs {
+    display: none;
+  }
+}
+@media only screen and (min-width: 30rem) {
+  .container {
+    margin: 8rem auto;
+  }
+  .question {
+    max-width: 60%;
+  }
+  .container h1 {
+    font-size: clamp(4em, 5vw, 5em);
+  }
+  .specialBtns::after {
+    top: 10%;
+  }
+  .formRadioButton::after {
+    top: 15%;
+  }
+}
+@media only screen and (min-width: 35rem) {
+  .brs2 {
+    display: none;
+  }
+}
+@media only screen and (min-width: 37rem) {
+  .checks {
+    left: -18%;
+  }
+}
+@media only screen and (min-width: 45rem) {
+  .answers {
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: unset;
+  }
+  .question4 .questionContainer {
+    display: unset;
+    flex-direction: unset;
+    position: unset;
+  }
+  .checks {
+    position: unset;
+    left: unset;
+    top: unset;
+    transform: rotate(0);
+    width: unset;
+  }
+  .answers div {
+    justify-content: center;
+  }
+  .question4 .formRadioButton {
+    transform: rotate(0);
+  }
+  .question5 {
+    margin-top: 3rem;
+  }
+}
