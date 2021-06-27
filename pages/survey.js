@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import surveyData from '../apis/surveyData';
+// import surveyData from '../apis/surveyData';
 import surveyStyles from '../styles/Survey.module.css';
 import Question1 from '../components/Question1';
 import Question2 from '../components/Question2';
@@ -13,10 +13,6 @@ const survey = () => {
   const [state, setState] = useState({});
   const [active, setActive] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
 
   const collectQ1 = (datas) => {
     if (datas === 1) {
