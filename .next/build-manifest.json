@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/Gg2MmxUYvU9h012DxLCGZ/_buildManifest.js",
-    "static/Gg2MmxUYvU9h012DxLCGZ/_ssgManifest.js"
+    "static/P61WNcj2PwH2gooT6FLGO/_buildManifest.js",
+    "static/P61WNcj2PwH2gooT6FLGO/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -41,7 +41,7 @@
       "static/chunks/framework-64eb7138163e04c228e4.js",
       "static/chunks/main-71948af4b0f09c0fc30e.js",
       "static/css/a80f0a9f7e068721e9a6.css",
-      "static/chunks/pages/survey-977ab5ccc64f1e5e52f5.js"
+      "static/chunks/pages/survey-c2c80b1fef0bbffb5922.js"
     ]
   },
   "ampFirstPages": []

@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // import surveyData from '../apis/surveyData';
 import surveyStyles from '../styles/Survey.module.css';
 import Question1 from '../components/Question1';
@@ -15,57 +15,17 @@ const survey = () => {
   const router = useRouter();
 
   const collectQ1 = (datas) => {
-    if (datas === 1) {
-      setState((prevState) => ({
-        ...prevState,
-        question1: 1,
-      }));
-    }
-    if (datas === 2) {
-      setState((prevState) => ({
-        ...prevState,
-        question1: 2,
-      }));
-    }
-    if (datas === 3) {
-      setState((prevState) => ({
-        ...prevState,
-        question1: 3,
-      }));
-    }
-    if (datas === 4) {
-      setState((prevState) => ({
-        ...prevState,
-        question1: 4,
-      }));
-    }
+    setState((prevState) => ({
+      ...prevState,
+      question1: datas,
+    }));
   };
 
   const collectQ2 = (datas) => {
-    if (datas === 1) {
-      setState((prevState) => ({
-        ...prevState,
-        question2: 1,
-      }));
-    }
-    if (datas === 2) {
-      setState((prevState) => ({
-        ...prevState,
-        question2: 2,
-      }));
-    }
-    if (datas === 3) {
-      setState((prevState) => ({
-        ...prevState,
-        question2: 3,
-      }));
-    }
-    if (datas === 4) {
-      setState((prevState) => ({
-        ...prevState,
-        question2: 4,
-      }));
-    }
+    setState((prevState) => ({
+      ...prevState,
+      question2: datas,
+    }));
   };
 
   const collectQ3 = (datas) => {
@@ -76,36 +36,10 @@ const survey = () => {
   };
 
   const collectQ4 = (datas) => {
-    if (datas === 1) {
-      setState((prevState) => ({
-        ...prevState,
-        question4: 1,
-      }));
-    }
-    if (datas === 2) {
-      setState((prevState) => ({
-        ...prevState,
-        question4: 2,
-      }));
-    }
-    if (datas === 3) {
-      setState((prevState) => ({
-        ...prevState,
-        question4: 3,
-      }));
-    }
-    if (datas === 4) {
-      setState((prevState) => ({
-        ...prevState,
-        question4: 4,
-      }));
-    }
-    if (datas === 5) {
-      setState((prevState) => ({
-        ...prevState,
-        question4: 5,
-      }));
-    }
+    setState((prevState) => ({
+      ...prevState,
+      question4: datas,
+    }));
   };
 
   const collectQ5 = (datas) => {
@@ -116,18 +50,10 @@ const survey = () => {
   };
 
   const collectQ6 = (datas) => {
-    if (datas === 1) {
-      setState((prevState) => ({
-        ...prevState,
-        question6: 1,
-      }));
-    }
-    if (datas === 2) {
-      setState((prevState) => ({
-        ...prevState,
-        question6: 2,
-      }));
-    }
+    setState((prevState) => ({
+      ...prevState,
+      question6: datas,
+    }));
   };
 
   const onSubmit = async (e) => {
